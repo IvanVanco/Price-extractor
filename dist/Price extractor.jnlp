@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Price extractor.jnlp">
+  <information>
+    <title>Price extractor</title>
+    <vendor>ivke1</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib\commons-codec-1.10.jar" size="284184" download="eager" />
+    <jar href="lib\commons-collections4-4.1.jar" size="751238" download="eager" />
+    <jar href="lib\commons-io-2.6-javadoc.jar" size="833601" download="eager" />
+    <jar href="lib\commons-io-2.6-sources.jar" size="280834" download="eager" />
+    <jar href="lib\commons-io-2.6.jar" size="214788" download="eager" />
+    <jar href="lib\commons-logging-1.2.jar" size="61829" download="eager" />
+    <jar href="lib\curvesapi-1.04.jar" size="98365" download="eager" />
+    <jar href="lib\gson-2.8.2.jar" size="232932" download="eager" />
+    <jar href="lib\junit-4.12.jar" size="314932" download="eager" />
+    <jar href="lib\log4j-1.2.17.jar" size="489884" download="eager" />
+    <jar href="lib\poi-3.15.jar" size="2579580" download="eager" />
+    <jar href="lib\poi-examples-3.15.jar" size="353854" download="eager" />
+    <jar href="lib\poi-excelant-3.15.jar" size="31364" download="eager" />
+    <jar href="lib\poi-ooxml-3.15.jar" size="1338241" download="eager" />
+    <jar href="lib\poi-ooxml-schemas-3.15.jar" size="5859007" download="eager" />
+    <jar href="lib\poi-scratchpad-3.15.jar" size="1324935" download="eager" />
+    <jar href="lib\xmlbeans-2.6.0.jar" size="2730866" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="Initializing view, please wait ..."  name="Price extractor" />
+  <update check="always"/>
+</jnlp>

@@ -1,0 +1,176 @@
+
+.table-column{
+    -fx-alignment: CENTER;
+}
+
+#ikone, #naziv{
+    -fx-alignment: CENTER_LEFT;
+}
+
+.toggle-button{
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: #cccccc;
+    -fx-alignment: BOTTOM_CENTER;
+    -fx-content-display: top;
+    -fx-background-position: center 5px;
+    -fx-effect: dropshadow(two-pass-box, #113, 10, 0, 0, 9);
+}
+
+#split{ -fx-background-color: wheat; }
+#border{ -fx-background-color: wheat; }
+
+.toggle-button:selected{
+    -fx-background-color: #3e8e41; 
+    -fx-text-fill: #fff;
+}
+
+.toggle-button:hover {
+    -fx-background-color: #999999;
+    
+}
+.toggle-button:pressed {
+  -fx-background-color: #999999;
+  -fx-effect: dropshadow(three-pass-box, #666, 10, 0, 0, 5);
+  -fx-translate-x: 4;
+    
+}
+ 
+.button {
+  -fx-background-color: #4CAF50;
+  -fx-text-fill: #fff;
+  -fx-border: none;
+  -fx-border-radius: 15px;
+  -fx-effect: dropshadow(two-pass-box, #999, 10, 0, 0, 9);
+}
+
+.button:hover {-fx-background-color: #3e8e41}
+
+.button:pressed {
+  -fx-background-color: #3e8e41;
+  -fx-effect: dropshadow(three-pass-box, #666, 10, 0, 0, 5);
+  -fx-translate-y: 4;
+}
+
+#save,#refresh{
+    -fx-font: bold 12pt "Times New Roman"; 
+    -fx-alignment: CENTER_RIGHT;
+    -fx-background-repeat: no-repeat;
+    -fx-content-display: left;
+    -fx-background-position: 5px 7px;
+    
+}
+
+#attackStyles,#sets,#other,#potions,#zulrah,#farmingHerbs,#revenants, #treasureTrails{
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5px 7px;
+}
+
+#attackStyles{
+    -fx-background-image: url("../slike/Buttons/Bosses.jpg");
+    -fx-background-position: 0px 3px;
+} 
+
+#sets{
+    -fx-background-image: url("../slike/Buttons/ArmorSet.png");
+    -fx-alignment: CENTER_RIGHT;
+    -fx-background-position: 6px 7px;    
+}
+
+#other{
+    -fx-background-image: url("../slike/Buttons/Other.png");
+    -fx-background-position: 2px 7px;
+}
+
+#potions{
+    -fx-background-image: url("../slike/Buttons/Potion.png");
+}
+
+#revenants{
+    -fx-background-image: url("../slike/Buttons/Revs.png"); 
+    -fx-background-position: 2px 7px; 
+}
+
+#treasureTrails{
+    -fx-background-image: url("../slike/Buttons/Cluescroll.png"); 
+    -fx-background-position: 2px 7px; 
+}
+
+#zulrah{
+    -fx-background-image: url("../slike/Buttons/ZulrahBlue.png"); 
+    -fx-background-position: 2px 7px; 
+}
+
+#farmingHerbs{
+    -fx-background-image: url("../slike/Buttons/Farming.png");
+    -fx-background-position: 2px 7px;
+}
+
+#refresh{
+    -fx-background-image: url("../slike/Buttons/Refresh.png");
+}
+
+#save{
+    -fx-background-image: url("../slike/Buttons/Excel.png");
+}
+
+#revenantsBar{
+    -fx-background-image: url("../slike/Toggle/Revenants.png");
+    -fx-background-size: 36px;
+}
+#treasureBar{
+    -fx-background-image: url("../slike/Toggle/Casket.png");
+    -fx-background-size: 36px;
+}
+#zulrahBar{
+    -fx-background-image: url("../slike/Toggle/Zulrah_boss.png");
+    -fx-background-size: 36px;
+}
+#farmingBar{
+    -fx-background-image: url("../slike/Toggle/Herblore.png");
+}
+#potionsBar{
+    -fx-background-image: url("../slike/Toggle/Potions.png");
+}
+#meleeBar{
+    -fx-background-image: url("../slike/Toggle/Melee.png");
+}
+#rangedBar{
+    -fx-background-image: url("../slike/Toggle/Ranged.png");
+    -fx-background-size: 25px;
+}
+#magicBar{
+    -fx-background-image: url("../slike/Toggle/Magic.png");
+}
+#raids1Bar{
+    -fx-background-image: url("../slike/Toggle/Raids1.png");
+}
+#raids2Bar{
+    -fx-background-image: url("../slike/Toggle/Raids2.png");
+}
+#guthansBar{
+    -fx-background-image: url("../slike/Toggle/Guthan's_armour.png");
+}
+#dharokBar{
+    -fx-background-image: url("../slike/Toggle/Dharok's_armour.png");
+}
+#foodBar{
+    -fx-background-image: url("../slike/Toggle/Anchovy_pizza.png");
+    -fx-background-size: 32px;
+}
+#resBar{
+    -fx-background-image: url("../slike/Toggle/Axe_n_pickaxe.png");
+}
+#ammoBar{
+    -fx-background-image: url("../slike/Toggle/Ammo.png");
+}
+#telrunsBar{
+    -fx-background-image: url("../slike/Toggle/Teleport.png");
+}
+#otherBar{
+    -fx-background-image: url("../slike/Toggle/Other.png");
+    -fx-background-size: 32px;
+}
+
+#labelWelcome{
+    -fx-font: bold 14pt "Times New Roman";        
+}

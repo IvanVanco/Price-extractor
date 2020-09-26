@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="border" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="597.0" prefWidth="1058.0" xmlns="http://javafx.com/javafx/8.0.211" xmlns:fx="http://javafx.com/fxml/1" fx:controller="extractor.Controller">
+   <top>
+      <HBox fx:id="menubar">
+         <children>
+            <MenuBar prefHeight="25.0" prefWidth="1070.0" HBox.hgrow="ALWAYS">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+         <BorderPane.margin>
+            <Insets left="-10.0" />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+   <left>
+      <VBox fx:id="vbuttons" maxHeight="-Infinity" prefHeight="561.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="revenants" mnemonicParsing="false" prefHeight="42.0" prefWidth="100.0" text="      Revenants" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="zulrah" mnemonicParsing="false" prefHeight="42.0" prefWidth="100.0" text="Zulrah" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="potions" mnemonicParsing="false" prefHeight="42.0" prefWidth="100.0" text="Potions" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="farmingHerbs" mnemonicParsing="false" prefHeight="42.0" prefWidth="100.0" text="      Farming      . Herbs" textAlignment="CENTER" wrapText="true" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="attackStyles" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="42.0" prefWidth="100.0" text="       Weapons    .  Armor" textAlignment="CENTER" wrapText="true" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="sets" mnemonicParsing="false" prefHeight="42.0" prefWidth="100.0" text="Armor sets" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="treasureTrails" mnemonicParsing="false" text="        Treasure .          Trails" wrapText="true" />
+               </children>
+            </HBox>
+            <HBox prefHeight="92.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="other" mnemonicParsing="false" prefHeight="42.0" prefWidth="100.0" text="Other" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </VBox>
+   </left>
+   <center>
+      <SplitPane fx:id="split" dividerPositions="0.1536697247706422" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane fx:id="anchorBar" minHeight="0.0" minWidth="0.0" prefHeight="56.0" prefWidth="792.0">
+               <children>
+                  <ToggleButton fx:id="revenantsBar" contentDisplay="TOP" layoutX="3.0" layoutY="2.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="50.0" text="Revs" visible="false">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="grupa" />
+                     </toggleGroup></ToggleButton>
+                  <ToggleButton fx:id="zulrahBar" contentDisplay="TOP" layoutX="3.0" layoutY="2.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="50.0" text="Zulrah" toggleGroup="$grupa" visible="false" />
+                  <ToggleButton fx:id="farmingBar" contentDisplay="TOP" layoutX="3.0" layoutY="2.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="74.0" text="FarmHerb" toggleGroup="$grupa" visible="false" />
+                  <ToggleButton fx:id="potionsBar" contentDisplay="TOP" layoutX="3.0" layoutY="2.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="56.0" text="Potions" toggleGroup="$grupa" visible="false" />
+                  <ToggleButton fx:id="meleeBar" contentDisplay="TOP" layoutX="3.0" layoutY="1.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="49.0" text="Melee" toggleGroup="$grupa" visible="false" />
+                  <ToggleButton fx:id="rangedBar" contentDisplay="TOP" layoutX="71.0" layoutY="1.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="57.0" text="Ranged" toggleGroup="$grupa" visible="false" />
+                  <ToggleButton fx:id="magicBar" contentDisplay="TOP" layoutX="143.0" layoutY="1.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="49.0" text="Magic" toggleGroup="$grupa" visible="false" />
+                  <ToggleButton fx:id="raids1Bar" contentDisplay="TOP" layoutX="214.0" layoutY="1.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="56.0" text="Raids 1" toggleGroup="$grupa" visible="false" />
+                  <ToggleButton fx:id="raids2Bar" contentDisplay="TOP" layoutX="285.0" layoutY="1.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="56.0" text="Raids 2" toggleGroup="$grupa" visible="false" />
+                  <ToggleButton fx:id="guthansBar" contentDisplay="TOP" layoutX="3.0" layoutY="2.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="Guthans" toggleGroup="$grupa" visible="false" />
+                  <ToggleButton fx:id="dharokBar" contentDisplay="TOP" layoutX="79.0" layoutY="3.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="55.0" text="Dharok" toggleGroup="$grupa" visible="false" />
+                  <ToggleButton fx:id="treasureBar" contentDisplay="TOP" layoutX="3.0" layoutY="2.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="50.0" text="Clue" toggleGroup="$grupa" visible="false" />
+                  <ToggleButton fx:id="foodBar" contentDisplay="TOP" layoutX="3.0" layoutY="2.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="43.0" text="Food" toggleGroup="$grupa" visible="false" />
+                  <ToggleButton fx:id="resBar" contentDisplay="TOP" layoutX="64.0" layoutY="2.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="70.0" text="Resources" toggleGroup="$grupa" visible="false" />
+                  <ToggleButton fx:id="ammoBar" contentDisplay="TOP" layoutX="149.0" layoutY="2.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="52.0" text="Ammo" toggleGroup="$grupa" visible="false" />
+                  <ToggleButton fx:id="telrunsBar" contentDisplay="TOP" layoutX="214.0" layoutY="2.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="66.0" text="Teleports" toggleGroup="$grupa" visible="false" />
+                  <ToggleButton fx:id="otherBar" contentDisplay="TOP" layoutX="292.0" layoutY="2.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="47.0" text="Other" toggleGroup="$grupa" visible="false" />
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="256.0" prefWidth="488.0">
+               <children>
+                  <AnchorPane fx:id="anchorTables" layoutY="-17.0" prefHeight="420.0" prefWidth="933.0" visible="false">
+                     <children>
+                        <TableView fx:id="tabela" layoutX="1.0" layoutY="11.0" prefHeight="420.0" prefWidth="927.0" AnchorPane.bottomAnchor="-7.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="11.0">
+                            <columns>
+                              <TableColumn fx:id="ikone" prefWidth="40.0" />
+                              <TableColumn fx:id="naziv" prefWidth="122.0" text="Name" />
+                            <TableColumn fx:id="buy" prefWidth="35.0" text="Buy" />
+                            <TableColumn fx:id="sell" prefWidth="36.0" text="Sell" />
+                              <TableColumn fx:id="ge" prefWidth="34.0" text="Ge" />
+                              <TableColumn fx:id="altstrategies" prefWidth="75.0" text="Alternative strategies" visible="false">
+                                 <columns>
+                                    <TableColumn fx:id="margin" prefWidth="75.0" text="Buy - Sell" />
+                                    <TableColumn fx:id="itemtoscales" prefWidth="86.0" text="Item to Scales" />
+                                    <TableColumn fx:id="itemtoitem" prefWidth="64.0" text="Item to Item" />
+                                 </columns>
+                              </TableColumn>
+                              <TableColumn fx:id="beststrategy" prefWidth="75.0" text="Best strategy" visible="false" />
+                              <TableColumn fx:id="pp1" prefWidth="81.0" text="Profit" />
+                              <TableColumn fx:id="bestpp1" prefWidth="75.0" text="Best profit" visible="false" />
+                              <TableColumn fx:id="limit" prefWidth="43.0" text="Limit" />
+                              <TableColumn fx:id="besttp" prefWidth="75.0" text="Total profit" visible="false" />
+                              <TableColumn fx:id="tp" prefWidth="69.0" text="Total profit" />
+                              <TableColumn fx:id="bestroi" prefWidth="75.0" text="ROI" visible="false" />
+                              <TableColumn fx:id="roi" prefWidth="40.0" text="ROI" />
+                          </columns>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="anchorStart" prefHeight="367.0" prefWidth="930.0">
+                     <children>
+                        <Label fx:id="labelWelcome" layoutX="7.0" layoutY="203.0" prefHeight="164.0" prefWidth="905.0" text="Welcome to first unique Runescape price extractor application. U can choose group of items on left side of screen to get more specific groups on toolbar menu. It is matter of seconds for application to generate data from server. " wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="203.0" />
+                        <ImageView fitHeight="194.0" fitWidth="338.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
+                            <image> 
+                                <Image url="@slike/Flipping.png" /> 
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="221.0" fitWidth="245.0" layoutX="362.0" pickOnBounds="true" preserveRatio="true">
+                            <image> 
+                                <Image url="@slike/Flipping%20history.jpg" /> 
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="190.0" fitWidth="304.0" layoutX="613.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@slike/Flipping2.png" />
+                           </image>
+                        </ImageView>    
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="splashScreen" layoutX="265.0" layoutY="10.0" prefHeight="345.0" prefWidth="379.0">
+                     <children>
+                        <ImageView fx:id="gettingData" fitHeight="240.0" fitWidth="248.0" layoutX="88.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@slike/Create%20data.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="refreshingData" fitHeight="240.0" fitWidth="248.0" layoutX="88.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@slike/Refresh%20data.gif" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <HBox layoutY="425.0" prefHeight="38.0" prefWidth="912.0">
+                     <children>
+                        <Button fx:id="refresh" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="38.0" prefWidth="96.0" text="Refresh" visible="false">
+                           <HBox.margin>
+                              <Insets left="330.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="save" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="38.0" prefWidth="80.0" text="Save" visible="false">
+                           <HBox.margin>
+                              <Insets left="40.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+        </items>
+         <BorderPane.margin>
+            <Insets left="10.0" />
+         </BorderPane.margin>
+      </SplitPane>
+   </center>
+   <padding>
+      <Insets bottom="10.0" left="10.0" />
+   </padding>
+</BorderPane>
