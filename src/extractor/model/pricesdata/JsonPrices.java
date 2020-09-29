@@ -16,7 +16,7 @@ public class JsonPrices {
     //depreciated
     //private static final String BASE_URL_OSB = "https://api.rsbuddy.com/grandExchange?a=guidePrice&i=";
     private static final String URL_OSB = "https://rsbuddy.com/exchange/summary.json";
-    private static final String BASE_URL_GE = "http://services.runescape.com/m=itemdb_oldschool/api/graph/"; 
+    private static final String BASE_URL_GE = "https://services.runescape.com/m=itemdb_oldschool/api/graph/"; 
     private DateDiff diff = new DateDiff(); 
        
   
@@ -63,10 +63,12 @@ public class JsonPrices {
             url = new URL(BASE_URL_GE+ID+".json");
             HttpURLConnection request = (HttpURLConnection) url.openConnection();
             request.connect();
-            
+
             JsonParser jp = new JsonParser(); 
             JsonElement root;
+            
             root = jp.parse(new InputStreamReader((InputStream) request.getContent()));
+            //root = jp.parse(new InputStreamReader(request.getInputStream()));
             
             //Posle nekog vremena neprekidnog extractovanja osrs api nas kickuje
             //i ovaj uslov je da nam vrati ge price 0,kao inactive price
@@ -74,7 +76,7 @@ public class JsonPrices {
                 JsonObject rootobj = root.getAsJsonObject();
                 JsonElement danas = rootobj.getAsJsonObject("daily").get(String.valueOf(diff.getTodayTime()));
                 JsonElement juce = rootobj.getAsJsonObject("daily").get(String.valueOf(diff.getYesturdayTime()));
-            
+                
                 //Server nekada kasni sa izbacivanjem rezultata za danas
                 if(danas!=null){
                     ge = danas.getAsInt();

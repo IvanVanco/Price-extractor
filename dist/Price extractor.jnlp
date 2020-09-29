@@ -26,6 +26,6 @@
     <jar href="lib\poi-scratchpad-3.15.jar" size="1324935" download="eager" />
     <jar href="lib\xmlbeans-2.6.0.jar" size="2730866" download="eager" />
   </resources>
-  <jfx:javafx-desc  width="800" height="600" main-class="Initializing view, please wait ..."  name="Price extractor" />
+  <jfx:javafx-desc  width="800" height="600" main-class="extractor.Main"  name="Price extractor" />
   <update check="always"/>
 </jnlp>
