@@ -6,6 +6,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -22,33 +24,33 @@ import org.apache.poi.ss.usermodel.Workbook;
 
 public class ExcelFile {
    
-    private FileInputStream fajl;
+    private FileInputStream file;
     private Workbook book;
-    private Sheet strana;
-    private Row prvi_red;
+    private Sheet sheet;
+    private Row first_row;
     private FileOutputStream save;
-    private static final String DEST = "D:/User files/Desktop/Runescape prices.xlsx";
-    //private static final String TEMPLATE = System.getProperty("user.home") + "/Documents/Price extractor/src/extractor/excel/Template.xlsx";
+    private static final Path DEST_PATH = Paths.get(System.getProperty("user.home"), "Desktop", "Runescape prices.xlsx");
+    private static final String DEST = DEST_PATH.toString();
     private static final String TEMPLATE = System.getProperty("user.dir") + "/src/extractor/excel/Template.xlsx";
-    private int brojac = 2;
+    private int counter = 2;
     private CellStyle pricestyle, datestyle, timestyle;
-    private DataFormat format; 
+    private DataFormat format;
     
     
-    private void ucitavanjeFajla() {
+    private void loadFile() {
         try {    
-            //Ako ne postoji fajl kreira ga od template fajla na desktopu
+            //If the file does not exist, it creates it from the template file on the desktop
             if(!(new File(DEST).exists())){
-                fajl = new FileInputStream(new File(TEMPLATE));
+                file = new FileInputStream(new File(TEMPLATE));
             }
             else {
-                fajl = new FileInputStream(new File(DEST)); //Ucitavanje fajla
+                file = new FileInputStream(new File(DEST));
             }
             
-            book = new XSSFWorkbook(fajl);             //Ucitavanje booka
+            book = new XSSFWorkbook(file);
         }
         catch (FileNotFoundException ex) {
-               //Ako postoji fajl na ovoj lokaciji, onda treba zatvoriti fajl prvo
+               //If there is a file in this location, then you should close the file first
                if(new File(DEST).exists()) {
                   JOptionPane.showMessageDialog(null, "File named: "+new File(DEST).getName()
                           +" need to be closed in order to save data."
@@ -60,9 +62,9 @@ public class ExcelFile {
         }
     }
     
-    private void zatvaranjeFajla(){
+    private void closeFile(){
         try {
-            fajl.close();                           
+            file.close();                           
             save = new FileOutputStream(new File(DEST)); 
             book.write(save); 
             save.close();
@@ -74,10 +76,10 @@ public class ExcelFile {
     
     public ExcelFile(ObservableList<ItemIndicators> lista, String sheetName, Date datum) {
         
-            ucitavanjeFajla();         
+            loadFile();         
             
-            strana = book.getSheet(sheetName);    //Ucitavanje sheeta za menjanje     
-            prvi_red = strana.createRow(strana.getLastRowNum()+ 1);
+            sheet = book.getSheet(sheetName);     
+            first_row = sheet.createRow(sheet.getLastRowNum()+ 1);
             format = book.createDataFormat();
             pricestyle = book.createCellStyle();
             datestyle = book.createCellStyle();   
@@ -88,29 +90,29 @@ public class ExcelFile {
             timestyle.setAlignment(HorizontalAlignment.CENTER);
             
             datestyle.setDataFormat(format.getFormat("dd.MM.yyyy"));
-            timestyle.setDataFormat(format.getFormat("HH:mm:ss"));      //Styles
+            timestyle.setDataFormat(format.getFormat("HH:mm:ss"));
 
-            prvi_red.createCell(0).setCellValue(datum); //Datum
-            prvi_red.createCell(1).setCellValue(datum); //Vreme
+            first_row.createCell(0).setCellValue(datum);
+            first_row.createCell(1).setCellValue(datum);
             
-            prvi_red.getCell(0).setCellStyle(datestyle); 
-            prvi_red.getCell(1).setCellStyle(timestyle); 
+            first_row.getCell(0).setCellStyle(datestyle); 
+            first_row.getCell(1).setCellStyle(timestyle); 
             
             pricestyle.setDataFormat(format.getFormat("#,##0;#,##0;-"));
                     
                 for(int i=0; i < lista.size(); i++){
-                        prvi_red.createCell(brojac).setCellValue(lista.get(i).getBuyingPrice());
-                        prvi_red.getCell(brojac).setCellStyle(pricestyle);     
-                        brojac++;
-                        prvi_red.createCell(brojac).setCellValue(lista.get(i).getSellingPrice());
-                        prvi_red.getCell(brojac).setCellStyle(pricestyle);     
-                        brojac++;
-                        prvi_red.createCell(brojac).setCellValue(lista.get(i).getGePrice());
-                        prvi_red.getCell(brojac).setCellStyle(pricestyle);     
-                        brojac++;
+                        first_row.createCell(counter).setCellValue(lista.get(i).getBuyingPrice());
+                        first_row.getCell(counter).setCellStyle(pricestyle);     
+                        counter++;
+                        first_row.createCell(counter).setCellValue(lista.get(i).getSellingPrice());
+                        first_row.getCell(counter).setCellStyle(pricestyle);     
+                        counter++;
+                        first_row.createCell(counter).setCellValue(lista.get(i).getGePrice());
+                        first_row.getCell(counter).setCellStyle(pricestyle);     
+                        counter++;
                 }
             
-            zatvaranjeFajla();      
+            closeFile();      
     }
 }
 

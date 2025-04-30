@@ -13,38 +13,38 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class JsonPrices {
-    //depreciated
-    //private static final String BASE_URL_OSB = "https://api.rsbuddy.com/grandExchange?a=guidePrice&i=";
-    private static final String URL_OSB = "https://rsbuddy.com/exchange/summary.json";
+    private static final String URL_RNL = "https://prices.runescape.wiki/api/v1/osrs/latest";
     private static final String BASE_URL_GE = "https://services.runescape.com/m=itemdb_oldschool/api/graph/"; 
     private DateDiff diff = new DateDiff(); 
        
   
-    public int[] JsonOSBuddy(int ID){
+    public int[] JsonRuneLite(int ID){
        
-        int[] cene = new int[2];
+        int[] prices = new int[2];
         int buying=0;
         int selling=0;
         URL url;
         
         try {
-            url = new URL(URL_OSB);
+            url = new URL(URL_RNL);
             HttpURLConnection request = (HttpURLConnection) url.openConnection();
+            request.setRequestMethod("GET");
+            request.setRequestProperty("User-Agent", "RuneLite-DataFetcher/1.0");
+            request.setRequestProperty("Accept", "application/json");
             request.connect();
             
             JsonParser jp = new JsonParser(); 
             JsonElement root;
             root = jp.parse(new InputStreamReader((InputStream) request.getContent()));
             
-            //SVI ITEMI U .JSON FORMATU
             JsonObject rootobj = root.getAsJsonObject();
-            //SAMO ITEM SA ID 
-            JsonObject item = rootobj.getAsJsonObject(String.valueOf(ID));
+            JsonObject data = rootobj.getAsJsonObject("data");
+            JsonObject item = data.getAsJsonObject(String.valueOf(ID));
 
-            buying = item.get("buy_average").getAsInt();
-            selling = item.get("sell_average").getAsInt();
-            cene[0] = buying;
-            cene[1] = selling;
+            buying = item.get("high").getAsInt();
+            selling = item.get("low").getAsInt();
+            prices[0] = buying;
+            prices[1] = selling;
         }
         catch (MalformedURLException ex) {
             Logger.getLogger(JsonPrices.class.getName()).log(Level.SEVERE, null, ex);
@@ -52,7 +52,7 @@ public class JsonPrices {
         catch (IOException ex) {
             Logger.getLogger(JsonPrices.class.getName()).log(Level.SEVERE, null, ex);
         }
-            return cene;
+            return prices;
 }
     
     public int JsonGE(int ID){
@@ -68,21 +68,20 @@ public class JsonPrices {
             JsonElement root;
             
             root = jp.parse(new InputStreamReader((InputStream) request.getContent()));
-            //root = jp.parse(new InputStreamReader(request.getInputStream()));
             
-            //Posle nekog vremena neprekidnog extractovanja osrs api nas kickuje
-            //i ovaj uslov je da nam vrati ge price 0,kao inactive price
+            //After some time of continuous extraction, the osrs api kicks us
+            //and this condition is to return ge price 0, as an inactive price
             if(!(root.isJsonNull())){
                 JsonObject rootobj = root.getAsJsonObject();
-                JsonElement danas = rootobj.getAsJsonObject("daily").get(String.valueOf(diff.getTodayTime()));
-                JsonElement juce = rootobj.getAsJsonObject("daily").get(String.valueOf(diff.getYesturdayTime()));
+                JsonElement today = rootobj.getAsJsonObject("daily").get(String.valueOf(diff.getTodayTime()));
+                JsonElement yesturday = rootobj.getAsJsonObject("daily").get(String.valueOf(diff.getYesturdayTime()));
                 
-                //Server nekada kasni sa izbacivanjem rezultata za danas
-                if(danas!=null){
-                    ge = danas.getAsInt();
+                //The server is sometimes late in releasing today's results
+                if(today!=null){
+                    ge = today.getAsInt();
                 }
                 else {
-                    ge = juce.getAsInt();
+                    ge = yesturday.getAsInt();
                 }        
                 }
             else {
