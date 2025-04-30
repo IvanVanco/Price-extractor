@@ -3,3 +3,4 @@
 /nbproject
 *.jar
 /build
+*.properties
