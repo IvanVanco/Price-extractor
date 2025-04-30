@@ -22,13 +22,13 @@ public enum EnumData {
         Ring_of_suffering(19550,8,"Magic", "Ring of suffering"), 
         Mages_book(6889,15,"Magic", "Mage's book"), 
         Occult_necklace(12002,8,"Magic", "Occult necklace"),
-        Staff_of_light(22296,8,"Magic", "Staff of light"),                  //NOVO
-        Staff_of_the_dead(11791,8,"Magic", "Staff of the dead"),            //NOVO
-        Saradomins_light(13256,5,"Magic", "Saradomin's light"),             //NOVO
-        Ancient_wyvern_shield(21634,8,"Magic", "Ancient wyvern shield"),    //NOVO
-        Wyvern_visage(21637,5,"Magic", "Wyvern visage"),                    //NOVO
-        Arcane_spirit_shield(12825,8,"Magic", "Arcane spirit shield"),      //NOVO
-        Malediction_ward(11924,8,"Magic", "Malediction ward"),              //NOVO
+        Staff_of_light(22296,8,"Magic", "Staff of light"),                  
+        Staff_of_the_dead(11791,8,"Magic", "Staff of the dead"),            
+        Saradomins_light(13256,5,"Magic", "Saradomin's light"),             
+        Ancient_wyvern_shield(21634,8,"Magic", "Ancient wyvern shield"),    
+        Wyvern_visage(21637,5,"Magic", "Wyvern visage"),                    
+        Arcane_spirit_shield(12825,8,"Magic", "Arcane spirit shield"),      
+        Malediction_ward(11924,8,"Magic", "Malediction ward"),              
         
         //Raids 1
         Twisted_bow(20997,8,"Raids1","Twisted bow"),
@@ -37,9 +37,9 @@ public enum EnumData {
         Master_wand(6914,70,"Raids1","Master wand"),
         Elder_maul(21003,8,"Raids1","Elder maul"),
         Dragon_claws(13652,8,"Raids1","Dragon claws"),
-        Dexterous_prayer_scroll(21034,8, "Raids1", "Dexterous prayer scroll"),  //OTHER
-        Arcane_prayer_scroll(21079,8, "Raids1", "Arcane prayer scroll"),        //OTHER
-        Dinhs_bulwark(21015,8, "Raids1", "Dinh's bulwark"),                     //MELEE
+        Dexterous_prayer_scroll(21034,8, "Raids1", "Dexterous prayer scroll"),  
+        Arcane_prayer_scroll(21079,8, "Raids1", "Arcane prayer scroll"),        
+        Dinhs_bulwark(21015,8, "Raids1", "Dinh's bulwark"),                     
         Ancestral_hat(21018,8,"Raids1","Ancestral hat"),
         Ancestral_robe_top(21021,8,"Raids1","Ancestral robe top"),
         Ancestral_robe_bottom(21024,8,"Raids1","Ancestral robe bottom"),
@@ -142,10 +142,10 @@ public enum EnumData {
         Super_strength3(157,2000, "Potions", "Super strength(3)"), 
         Ranging_potion4(2444,2000, "Potions", "Ranging potion(4)"), 
         Ranging_potion3(169,2000, "Potions", "Ranging potion(3)"),
-        Bastion_potion4(22461,2000, "Potions", "Bastion potion(4)"), //NOVO
-        Bastion_potion3(22464,2000, "Potions", "Bastion potion(3)"),  //NOVO
-        Battlemage_potion4(22449,2000, "Potions", "Battlemage potion(4)"), //NOVO
-        Battlemage_potion3(22452,2000, "Potions", "Battlemage potion(3)"),  //NOVO
+        Bastion_potion4(22461,2000, "Potions", "Bastion potion(4)"), 
+        Bastion_potion3(22464,2000, "Potions", "Bastion potion(3)"),  
+        Battlemage_potion4(22449,2000, "Potions", "Battlemage potion(4)"), 
+        Battlemage_potion3(22452,2000, "Potions", "Battlemage potion(3)"),
         Vial_of_blood(22446,13000, "Potions", "Vial of blood"),  //NOVO        
         Guthix_rest4(4417,2000, "Potions", "Guthix rest(4)"), 
         Sanfew_serum4(10925,2000, "Potions", "Sanfew serum(4)"), 
@@ -191,9 +191,9 @@ public enum EnumData {
         Superior_dragon_bones(22124,7500, "Resources", "Superior dragon bones"),
         Dagannoth_bones(6729,7500, "Resources", "Dagannoth bones"), 
         Wyvern_bones(6812,7500, "Resources", "Wyvern bones"), 
-        Hydra_bones(22786,7500, "Resources", "Hydra bones"),              //NOVO
-        Drake_bones(22783,7500, "Resources", "Drake bones"),              //NOVO
-        Wyrm_bones(22780,7500, "Resources", "Wyrm bones"),                //NOVO
+        Hydra_bones(22786,7500, "Resources", "Hydra bones"),              
+        Drake_bones(22783,7500, "Resources", "Drake bones"),              
+        Wyrm_bones(22780,7500, "Resources", "Wyrm bones"),                
         Runite_bar(2363,10000, "Resources", "Runite bar"),
         Runite_ore(451,4500, "Resources", "Runite ore"), 
         Adamantite_bar(2361,10000, "Resources", "Adamantite bar"), 
@@ -211,7 +211,7 @@ public enum EnumData {
         Cosmic_runes(564,12000, "RunesTeleports", "Cosmic runes"),
         Astral_runes(9075,10000, "RunesTeleports", "Astral runes"), 
         Zulandra_teleport(12938,10000, "RunesTeleports", "Zul-andra teleport"),
-        Revenant_cave_teleport(21802,10000, "RunesTeleports", "Revenant cave teleport"),      //NOVO
+        Revenant_cave_teleport(21802,10000, "RunesTeleports", "Revenant cave teleport"),      
         Falador_teleport(8009,10000, "RunesTeleports", "Falador teleport"),
         Varrock_teleport(8007,10000, "RunesTeleports", "Varrock teleport"), 
         Teleport_to_house(8013,10000, "RunesTeleports", "Teleport to house"), 
@@ -230,15 +230,15 @@ public enum EnumData {
         Mithril_dart(809,7000, "Ammo", "Mithril dart"), 
         Dragon_arrows(11212,11000, "Ammo", "Dragon arrows"),
         Diamond_bolts_e(9243,11000, "Ammo", "Diamond bolts (e)"),
-        Diamond_dragon_bolts(21969,11000, "Ammo", "Diamond dragon bolts"),      //NOVO
-        Diamond_dragon_bolts_e(21946,11000, "Ammo", "Diamond dragon bolts (e)"),//NOVO
+        Diamond_dragon_bolts(21969,11000, "Ammo", "Diamond dragon bolts"),      
+        Diamond_dragon_bolts_e(21946,11000, "Ammo", "Diamond dragon bolts (e)"),
         Ruby_bolts_e(9242,11000, "Ammo", "Ruby bolts (e)"),
-        Ruby_dragon_bolts(21967,11000, "Ammo", "Ruby dragon bolts"),            //NOVO
-        Ruby_dragon_bolts_e(21944,11000, "Ammo", "Ruby dragon bolts (e)"),      //NOVO
+        Ruby_dragon_bolts(21967,11000, "Ammo", "Ruby dragon bolts"),            
+        Ruby_dragon_bolts_e(21944,11000, "Ammo", "Ruby dragon bolts (e)"),      
         Amethyst_broad_bolts(21316,11000, "Ammo", "Amethyst broad bolts"),
-        Dragon_bolts(21905,11000, "Ammo", "Dragon bolts"),                      //NOVO
+        Dragon_bolts(21905,11000, "Ammo", "Dragon bolts"),                      
         Cannonball(2,7000, "Ammo", "Cannonball"),
-        Dragon_knife(22804,11000, "Ammo", "Dragon knife"),                      //NOVO
+        Dragon_knife(22804,11000, "Ammo", "Dragon knife"),                      
         
         //Farm and Herbs
         Snapdragon(3000,2000, "FarmHerb", "Snapdragon"),
@@ -256,17 +256,17 @@ public enum EnumData {
         Palm_sapling(5502,200, "FarmHerb", "Palm sapling"), 
         Papaya_sapling(5501,400, "FarmHerb", "Papaya sapling"), 
         Papaya_tree_seed(5288,200, "FarmHerb", "Papaya tree seed"),
-        Celastrus_sapling(22856,200, "FarmHerb", "Celastrus sapling"),            //NOVO
-        Celastrus_seed(22869,200, "FarmHerb", "Celastrus seed"),                  //NOVO
-        Redwood_sapling(22859,200, "FarmHerb", "Redwood sapling"),                //NOVO
-        Redwood_tree_seed(22871,200, "FarmHerb", "Redwood tree seed"),            //NOVO
-        Dragonfruit_sapling(22866,200, "FarmHerb", "Dragonfruit sapling"),        //NOVO
-        Dragonfruit_tree_seed(22877,200, "FarmHerb", "Dragonfruit tree seed"),    //NOVO
-        Mahogany_sapling(21480,200, "FarmHerb", "Mahogany sapling"),              //NOVO
-        Mahogany_seed(21488,200, "FarmHerb", "Mahogany seed"),                    //NOVO
-        Teak_sapling(21477,200, "FarmHerb", "Teak sapling"),                      //NOVO
-        Teak_seed(21486,200, "FarmHerb", "Teak seed"),                            //NOVO
-        White_lily_seed(22887,200, "FarmHerb", "White lily seed"),                //NOVO
+        Celastrus_sapling(22856,200, "FarmHerb", "Celastrus sapling"),            
+        Celastrus_seed(22869,200, "FarmHerb", "Celastrus seed"),                  
+        Redwood_sapling(22859,200, "FarmHerb", "Redwood sapling"),                
+        Redwood_tree_seed(22871,200, "FarmHerb", "Redwood tree seed"),            
+        Dragonfruit_sapling(22866,200, "FarmHerb", "Dragonfruit sapling"),        
+        Dragonfruit_tree_seed(22877,200, "FarmHerb", "Dragonfruit tree seed"),    
+        Mahogany_sapling(21480,200, "FarmHerb", "Mahogany sapling"),              
+        Mahogany_seed(21488,200, "FarmHerb", "Mahogany seed"),                    
+        Teak_sapling(21477,200, "FarmHerb", "Teak sapling"),                      
+        Teak_seed(21486,200, "FarmHerb", "Teak seed"),                            
+        White_lily_seed(22887,200, "FarmHerb", "White lily seed"),                
         
         //Other
         Dragon_axe(6739,40, "Other", "Dragon axe"),
@@ -278,13 +278,13 @@ public enum EnumData {
         Air_battlestaff(1397,14000, "Other", "Air battlestaff"),
         Fire_orb(569,10000, "Other", "Fire orb"), 
         Air_orb(573,10000, "Other", "Air orb"),
-        Bryophytas_staff(22368,8, "Other", "Bryophyta's staff (uncharged)"),     //NOVO       
+        Bryophytas_staff(22368,8, "Other", "Bryophyta's staff (uncharged)"),           
         Kraken_tentacle(12004,70, "Other", "Kraken tentacle"),
         Old_school_bond(13190,40, "Other", "Old school bond"), 
         Bones_to_peaches(8015,10000, "Other", "Bones to peaches"),
-        Ultracompost(21483,600, "Other", "Ultracompost"),                        //NOVO
-        Bottomless_compost_bucket(22994,5, "Other", "Bottomless compost bucket"),//NOVO
-        Burning_amulet(21166,10000, "Other", "Burning amulet(5)"),               //NOVO
+        Ultracompost(21483,600, "Other", "Ultracompost"),                        
+        Bottomless_compost_bucket(22994,5, "Other", "Bottomless compost bucket"),
+        Burning_amulet(21166,10000, "Other", "Burning amulet(5)"),               
         
         //Ranged
         Armadyl_chainskirt(11830,8, "Ranged", "Armadyl chainskirt"),
@@ -293,22 +293,22 @@ public enum EnumData {
         Armadyl_crossbow(11785,8, "Ranged", "Armadyl crossbow"), 
         Pegasian_crystal(13229,10, "Ranged", "Pegasian crystal"), 
         Ranger_boots(2577,8, "Ranged", "Ranger boots"),
-        Ranger_gloves(19994,8, "Ranged", "Ranger gloves"),               //NOVO
+        Ranger_gloves(19994,8, "Ranged", "Ranger gloves"),               
         Archers_ring(6733,8, "Ranged", "Archers ring"), 
         Heavy_ballista(19481,8, "Ranged", "Heavy ballista"), 
         Necklace_of_anguish(19547,8, "Ranged", "Necklace of anguish"), 
         Karils_leathertop(4736,15, "Ranged", "Karil's leathertop"),
-        Odium_ward(11926,8, "Ranged", "Odium ward"),                     //NOVO
-        Dragonfire_ward(22003,8, "Ranged", "Dragonfire ward"),           //NOVO
-        Skeletal_visage(22006,5, "Ranged", "Skeletal visage"),           //NOVO
-        Dragon_crossbow(21902,70, "Ranged", "Dragon crossbow"),          //NOVO
-        Dragon_limbs(21918,10, "Ranged", "Dragon limbs"),                //NOVO
+        Odium_ward(11926,8, "Ranged", "Odium ward"),                     
+        Dragonfire_ward(22003,8, "Ranged", "Dragonfire ward"),           
+        Skeletal_visage(22006,5, "Ranged", "Skeletal visage"),           
+        Dragon_crossbow(21902,70, "Ranged", "Dragon crossbow"),          
+        Dragon_limbs(21918,10, "Ranged", "Dragon limbs"),                
         
         //Melee
         Bandos_chestplate(11832,8, "Melee", "Bandos chestplate"), 
         Abyssal_whip(4151,70, "Melee", "Abyssal whip"), 
         Abyssal_bludgeon(13263,8, "Melee", "Abyssal bludgeon"), 
-        Abyssal_dagger(13265,8, "Melee", "Abyssal dagger"),                 //NOVO
+        Abyssal_dagger(13265,8, "Melee", "Abyssal dagger"),                 
         Bandos_godsword(11804,8, "Melee", "Bandos godsword"), 
         Bandos_tassets(11834,8, "Melee", "Bandos tassets"), 
         Amulet_of_fury(6585,8, "Melee", "Amulet of fury"), 
@@ -316,26 +316,26 @@ public enum EnumData {
         Dragon_boots(11840,70, "Melee", "Dragon boots"), 
         Primordial_boots(13239,8, "Melee", "Primordial boots"), 
         Primordial_crystal(13231,10, "Melee", "Primordial crystal"),
-        Guardian_boots(21733,8, "Melee", "Guardian boots"),                  //NOVO
-        Bandos_boots(11836,8, "Melee", "Bandos boots"),                      //NOVO
-        Black_tourmaline_core(21730,5, "Melee", "Black tourmaline core"),    //NOVO
+        Guardian_boots(21733,8, "Melee", "Guardian boots"),                  
+        Bandos_boots(11836,8, "Melee", "Bandos boots"),                      
+        Black_tourmaline_core(21730,5, "Melee", "Black tourmaline core"),    
         Zamorakian_hasta(11889,8, "Melee", "Zamorakian hasta"), 
         Zamorakian_spear(11824,8, "Melee", "Zamorakian spear"),
-        Dragon_hunter_lance(22978,8, "Melee", "Dragon hunter lance"),  //NOVO
-        Hydras_claw(22966,15, "Melee", "Hydra's claw"),                //NOVO
-        Brimstone_ring(22975,8, "Melee", "Brimstone ring"),            //NOVO
-        Hydra_leather(22983,15, "Melee", "Hydra leather"),             //NOVO
-        Granite_hammer(21742,8, "Melee", "Granite hammer"),            //NOVO
-        Granite_boots(21643,70, "Melee", "Granite boots"),             //NOVO
+        Dragon_hunter_lance(22978,8, "Melee", "Dragon hunter lance"),  
+        Hydras_claw(22966,15, "Melee", "Hydra's claw"),                
+        Brimstone_ring(22975,8, "Melee", "Brimstone ring"),            
+        Hydra_leather(22983,15, "Melee", "Hydra leather"),             
+        Granite_hammer(21742,8, "Melee", "Granite hammer"),            
+        Granite_boots(21643,70, "Melee", "Granite boots"),             
         Saradomin_godsword(11806,8, "Melee", "Saradomin godsword"), 
         Armadyl_godsword(11802,8, "Melee", "Armadyl godsword"), 
         Dragon_warhammer(13576,8, "Melee", "Dragon warhammer"), 
         Berserker_ring(6737,8, "Melee", "Berserker ring"), 
         Dragonfire_shield(11284,8, "Melee", "Dragonfire shield"),
-        Draconic_visage(11286,5, "Melee", "Draconic visage"),                //NOVO
-        Spectral_spirit_shield(12821,8, "Melee", "Spectral spirit shield"), //NOVO
-        Elysian_spirit_shield(12817,8, "Melee", "Elysian spirit shield"),   //NOVO
-        Black_mask(8901,70, "Melee", "Black mask (10)"),                     //NOVO
+        Draconic_visage(11286,5, "Melee", "Draconic visage"),                
+        Spectral_spirit_shield(12821,8, "Melee", "Spectral spirit shield"), 
+        Elysian_spirit_shield(12817,8, "Melee", "Elysian spirit shield"),   
+        Black_mask(8901,70, "Melee", "Black mask (10)"),                     
         
         
         //Guthans
@@ -356,26 +356,26 @@ public enum EnumData {
         private final int id;
         private final int limit;
         private final String folder;
-        private final String iconname;
-        private final ImageView ikonica;
+        private final String icon_name;
+        private final ImageView icons;
         
    
-        EnumData(int id, int limit, String folder, String iconname) {
+        EnumData(int id, int limit, String folder, String icon_name) {
             this.id = id;
             this.limit = limit;
             this.folder = folder;
-            this.iconname = iconname;
+            this.icon_name = icon_name;
             
-            ImageView tempikonica = null;
+            ImageView temp_icon = null;
             
             try {
-                URL url = getClass().getResource("/extractor/slike/"+ folder +"/"+ iconname+ ".png");
-                tempikonica = new ImageView(new Image(url.toURI().toString()));            
+                URL url = getClass().getResource("/extractor/slike/"+ folder +"/"+ icon_name+ ".png");
+                temp_icon = new ImageView(new Image(url.toURI().toString()));            
             } 
             catch (URISyntaxException ex) {
                 Logger.getLogger(EnumData.class.getName()).log(Level.SEVERE, null, ex);
             }
-            ikonica = tempikonica;
+            icons = temp_icon;
         }
 
         
@@ -392,11 +392,11 @@ public enum EnumData {
         }
 
         public String getIconname() {
-            return iconname;
+            return icon_name;
         }
 
         public ImageView getIkonica() {
-            return ikonica;
+            return icons;
         }
 
         

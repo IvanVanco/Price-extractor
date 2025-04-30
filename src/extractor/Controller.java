@@ -24,29 +24,29 @@ import javafx.scene.layout.AnchorPane;
 
 public class Controller implements Initializable {
 
-    @FXML private Button revenants, zulrah, farmingHerbs, potions, attackStyles, sets, other, treasureTrails;
+    @FXML private Button revenants, zulrah, farming_herbs, potions, attack_styles, sets, other, treasure_trails;
     @FXML private Button refresh, save;
-    @FXML private ImageView gettingData, refreshingData;
-    @FXML private AnchorPane anchorBar, anchorStart, anchorTables;
-    @FXML private ToggleButton revenantsBar, zulrahBar, farmingBar, potionsBar, meleeBar, rangedBar, magicBar, raids1Bar, raids2Bar,
-                            foodBar, guthansBar, dharokBar, treasureBar, resBar, ammoBar, telrunsBar, otherBar;
-    @FXML private TableView<ItemIndicators> tabela;
-    @FXML private TableColumn<ItemIndicators, String>   ikone, naziv, altstrategies, beststrategy;
-    @FXML private TableColumn<ItemIndicators, Integer>  pp1, limit, tp, margin, itemtoitem,
-                                                        itemtoscales, bestpp1, besttp, buy, sell, ge; 
-    @FXML private TableColumn<ItemIndicators, Double>   bestroi, roi;
+    @FXML private ImageView getting_data, refreshing_data;
+    @FXML private AnchorPane anchor_bar, anchor_start, anchor_tables;
+    @FXML private ToggleButton revenants_bar, zulrah_bar, farming_bar, potions_bar, melee_bar, ranged_bar, magic_bar, raids1_bar, raids2_bar,
+                            food_bar, guthans_bar, dharok_bar, treasure_bar, res_bar, ammo_bar, telruns_bar, other_bar;
+    @FXML private TableView<ItemIndicators> table;
+    @FXML private TableColumn<ItemIndicators, String>   icons, name, alt_strategies, best_strategy;
+    @FXML private TableColumn<ItemIndicators, Integer>  pp1, limit, tp, margin, item_to_item,
+                                                        item_to_scales, best_pp1, best_tp, buy, sell, ge; 
+    @FXML private TableColumn<ItemIndicators, Double>   best_roi, roi;
 
    
     
     private void tablesTypeOne(){
-        anchorStart.setVisible(false);
-        anchorTables.setVisible(true);
+        anchor_start.setVisible(false);
+        anchor_tables.setVisible(true);
                 
-        altstrategies.setVisible(false);
-        beststrategy.setVisible(false);
-        bestpp1.setVisible(false);
-        besttp.setVisible(false);
-        bestroi.setVisible(false);
+        alt_strategies.setVisible(false);
+        best_strategy.setVisible(false);
+        best_pp1.setVisible(false);
+        best_tp.setVisible(false);
+        best_roi.setVisible(false);
         
         pp1.setVisible(true);
         tp.setVisible(true);
@@ -57,18 +57,18 @@ public class Controller implements Initializable {
     }
         
     private void tablesTypeTwo(){
-        anchorStart.setVisible(false);
-        anchorTables.setVisible(true);
+        anchor_start.setVisible(false);
+        anchor_tables.setVisible(true);
         
-        altstrategies.setVisible(true);
-        beststrategy.setVisible(true);   
-        bestpp1.setVisible(true);
-        besttp.setVisible(true);
-        bestroi.setVisible(true);       
+        alt_strategies.setVisible(true);
+        best_strategy.setVisible(true);   
+        best_pp1.setVisible(true);
+        best_tp.setVisible(true);
+        best_roi.setVisible(true);       
         save.setVisible(true);
         refresh.setVisible(true);
         
-        itemtoscales.setVisible(false);
+        item_to_scales.setVisible(false);
         pp1.setVisible(false);
         tp.setVisible(false);
         roi.setVisible(false);
@@ -76,15 +76,15 @@ public class Controller implements Initializable {
     }
     
     private void tablesTypeThree(){
-        anchorStart.setVisible(false);
-        anchorTables.setVisible(true);
+        anchor_start.setVisible(false);
+        anchor_tables.setVisible(true);
         
-        altstrategies.setVisible(true);
-        itemtoscales.setVisible(true);
-        beststrategy.setVisible(true);   
-        bestpp1.setVisible(true);
-        besttp.setVisible(true);
-        bestroi.setVisible(true);       
+        alt_strategies.setVisible(true);
+        item_to_scales.setVisible(true);
+        best_strategy.setVisible(true);   
+        best_pp1.setVisible(true);
+        best_tp.setVisible(true);
+        best_roi.setVisible(true);       
         save.setVisible(true);
         refresh.setVisible(true);
         
@@ -95,35 +95,35 @@ public class Controller implements Initializable {
     }
     
     private void unlockScreen(){
-        refreshingData.setVisible(false);
-        gettingData.setVisible(false);
+        refreshing_data.setVisible(false);
+        getting_data.setVisible(false);
         save.setDisable(false);
         refresh.setDisable(false);
         revenants.setDisable(false); 
         zulrah.setDisable(false); 
-        farmingHerbs.setDisable(false); 
+        farming_herbs.setDisable(false); 
         potions.setDisable(false);
-        attackStyles.setDisable(false); 
+        attack_styles.setDisable(false); 
         sets.setDisable(false);
         other.setDisable(false);
-        treasureTrails.setDisable(false);
-        revenantsBar.setDisable(false);
-        zulrahBar.setDisable(false); 
-        farmingBar.setDisable(false); 
-        potionsBar.setDisable(false); 
-        meleeBar.setDisable(false); 
-        rangedBar.setDisable(false); 
-        magicBar.setDisable(false);
-        raids1Bar.setDisable(false);
-        raids2Bar.setDisable(false);
-        foodBar.setDisable(false);
-        guthansBar.setDisable(false); 
-        dharokBar.setDisable(false);
-        treasureBar.setDisable(false);
-        resBar.setDisable(false);
-        ammoBar.setDisable(false);
-        telrunsBar.setDisable(false); 
-        otherBar.setDisable(false);
+        treasure_trails.setDisable(false);
+        revenants_bar.setDisable(false);
+        zulrah_bar.setDisable(false); 
+        farming_bar.setDisable(false); 
+        potions_bar.setDisable(false); 
+        melee_bar.setDisable(false); 
+        ranged_bar.setDisable(false); 
+        magic_bar.setDisable(false);
+        raids1_bar.setDisable(false);
+        raids2_bar.setDisable(false);
+        food_bar.setDisable(false);
+        guthans_bar.setDisable(false); 
+        dharok_bar.setDisable(false);
+        treasure_bar.setDisable(false);
+        res_bar.setDisable(false);
+        ammo_bar.setDisable(false);
+        telruns_bar.setDisable(false); 
+        other_bar.setDisable(false);
     }
     
     private void lockScreen(){
@@ -131,63 +131,63 @@ public class Controller implements Initializable {
         refresh.setDisable(true);
         revenants.setDisable(true);
         zulrah.setDisable(true); 
-        farmingHerbs.setDisable(true); 
+        farming_herbs.setDisable(true); 
         potions.setDisable(true);
-        attackStyles.setDisable(true); 
+        attack_styles.setDisable(true); 
         sets.setDisable(true);
         other.setDisable(true);
-        treasureTrails.setDisable(true);
-        revenantsBar.setDisable(true);
-        zulrahBar.setDisable(true); 
-        farmingBar.setDisable(true); 
-        potionsBar.setDisable(true); 
-        meleeBar.setDisable(true); 
-        rangedBar.setDisable(true); 
-        magicBar.setDisable(true);
-        raids1Bar.setDisable(true);
-        raids2Bar.setDisable(true);
-        foodBar.setDisable(true);
-        guthansBar.setDisable(true); 
-        dharokBar.setDisable(true);
-        treasureBar.setDisable(true);
-        resBar.setDisable(true);
-        ammoBar.setDisable(true);
-        telrunsBar.setDisable(true); 
-        otherBar.setDisable(true);
+        treasure_trails.setDisable(true);
+        revenants_bar.setDisable(true);
+        zulrah_bar.setDisable(true); 
+        farming_bar.setDisable(true); 
+        potions_bar.setDisable(true); 
+        melee_bar.setDisable(true); 
+        ranged_bar.setDisable(true); 
+        magic_bar.setDisable(true);
+        raids1_bar.setDisable(true);
+        raids2_bar.setDisable(true);
+        food_bar.setDisable(true);
+        guthans_bar.setDisable(true); 
+        dharok_bar.setDisable(true);
+        treasure_bar.setDisable(true);
+        res_bar.setDisable(true);
+        ammo_bar.setDisable(true);
+        telruns_bar.setDisable(true); 
+        other_bar.setDisable(true);
     }
 
     private void resizeTable(){
-        new ColumnResizer(tabela, naziv);
-        new ColumnResizer(tabela, beststrategy);
-        new ColumnResizer(tabela, pp1);
-        new ColumnResizer(tabela, limit);
-        new ColumnResizer(tabela, tp);
-        new ColumnResizer(tabela, margin);
-        new ColumnResizer(tabela, itemtoitem);
-        new ColumnResizer(tabela, itemtoscales);
-        new ColumnResizer(tabela, bestpp1);
-        new ColumnResizer(tabela, besttp);
-        new ColumnResizer(tabela, buy);
-        new ColumnResizer(tabela, sell);
-        new ColumnResizer(tabela, ge);
-        new ColumnResizer(tabela, bestroi);
-        new ColumnResizer(tabela, roi);
+        new ColumnResizer(table, name);
+        new ColumnResizer(table, best_strategy);
+        new ColumnResizer(table, pp1);
+        new ColumnResizer(table, limit);
+        new ColumnResizer(table, tp);
+        new ColumnResizer(table, margin);
+        new ColumnResizer(table, item_to_item);
+        new ColumnResizer(table, item_to_scales);
+        new ColumnResizer(table, best_pp1);
+        new ColumnResizer(table, best_tp);
+        new ColumnResizer(table, buy);
+        new ColumnResizer(table, sell);
+        new ColumnResizer(table, ge);
+        new ColumnResizer(table, best_roi);
+        new ColumnResizer(table, roi);
     }
     
     private void setFoodView(){
         tablesTypeOne();
-        gettingData.setVisible(true);
+        getting_data.setVisible(true);
         
         new Thread(() ->{
             if(getFood() == null){
                 createFoodView();
-                tabela.setItems(getFood());
+                table.setItems(getFood());
                 setFoodTime();
                 unlockScreen();
                 resizeTable();
             }
             else {
-                tabela.setItems(getFood());
+                table.setItems(getFood());
                 unlockScreen();
                 resizeTable();
             }      
@@ -197,18 +197,18 @@ public class Controller implements Initializable {
     
     private void setTreasuretrailsView(){
         tablesTypeOne();
-        gettingData.setVisible(true);
+        getting_data.setVisible(true);
         
         new Thread(() ->{
             if(getTreasuretrails() == null){
                 createTreasuretrailsView();
-                tabela.setItems(getTreasuretrails());
+                table.setItems(getTreasuretrails());
                 setTreasureTime();
                 unlockScreen();
                 resizeTable();
             }
             else {
-                tabela.setItems(getTreasuretrails());
+                table.setItems(getTreasuretrails());
                 unlockScreen();
                 resizeTable();
             }      
@@ -218,18 +218,18 @@ public class Controller implements Initializable {
     
     private void setResourcesView(){
         tablesTypeOne();
-        gettingData.setVisible(true);
+        getting_data.setVisible(true);
         
         new Thread(() ->{
             if(getResources()== null){
                 createResourcesView();
-                tabela.setItems(getResources());
+                table.setItems(getResources());
                 setResTime(); 
                 unlockScreen();
                 resizeTable();
             }
             else {
-                tabela.setItems(getResources());
+                table.setItems(getResources());
                 unlockScreen();
                 resizeTable();
             }      
@@ -238,18 +238,18 @@ public class Controller implements Initializable {
     
     private void setAmmoView(){
         tablesTypeOne();
-        gettingData.setVisible(true);
+        getting_data.setVisible(true);
         
         new Thread(() ->{
             if(getAmmo() == null){
                 createAmmoView();
-                tabela.setItems(getAmmo());
+                table.setItems(getAmmo());
                 setAmmoTime();
                 unlockScreen();
                 resizeTable();
             }
             else {
-                tabela.setItems(getAmmo());
+                table.setItems(getAmmo());
                 unlockScreen();
                 resizeTable();
             }      
@@ -258,18 +258,18 @@ public class Controller implements Initializable {
     
     private void setTelRuneView(){
         tablesTypeOne();
-        gettingData.setVisible(true);
+        getting_data.setVisible(true);
         
         new Thread(() ->{
             if(getTelrune() == null){
                 createTelruneView();
-                tabela.setItems(getTelrune());
+                table.setItems(getTelrune());
                 setTelrunsTime();      
                 unlockScreen(); 
                 resizeTable();
             }
             else {
-                tabela.setItems(getTelrune());
+                table.setItems(getTelrune());
                 unlockScreen();
                 resizeTable();
             }      
@@ -278,18 +278,18 @@ public class Controller implements Initializable {
     
     private void setOtherView(){
         tablesTypeOne();
-        gettingData.setVisible(true);
+        getting_data.setVisible(true);
         
         new Thread(() ->{
             if(getOther() == null){
                 createOtherView();
-                tabela.setItems(getOther());
+                table.setItems(getOther());
                 setOtherTime();
                 unlockScreen();
                 resizeTable();
             }
             else {
-                tabela.setItems(getOther());
+                table.setItems(getOther());
                 unlockScreen();
                 resizeTable();
             }      
@@ -298,18 +298,18 @@ public class Controller implements Initializable {
     
     private void setGuthansView(){
         tablesTypeOne();
-        gettingData.setVisible(true);
+        getting_data.setVisible(true);
         
         new Thread(() ->{
             if(getGuthans() == null){
                 createGuthansView();
-                tabela.setItems(getGuthans());
+                table.setItems(getGuthans());
                 setGuthansTime();
                 unlockScreen();
                 resizeTable();
             }
             else {
-                tabela.setItems(getGuthans());
+                table.setItems(getGuthans());
                 unlockScreen();
                 resizeTable();
             }      
@@ -318,18 +318,18 @@ public class Controller implements Initializable {
     
     private void setDharokView(){
         tablesTypeOne();
-        gettingData.setVisible(true);
+        getting_data.setVisible(true);
         
         new Thread(() ->{
             if(getDharok() == null){
                 createDharokView();
-                tabela.setItems(getDharok());
+                table.setItems(getDharok());
                 setDharokTime();
                 unlockScreen();
                 resizeTable();
             }
             else {
-                tabela.setItems(getDharok());
+                table.setItems(getDharok());
                 unlockScreen();
                 resizeTable();
             }      
@@ -338,18 +338,18 @@ public class Controller implements Initializable {
    
     private void setRevenantsView(){
         tablesTypeTwo();
-        gettingData.setVisible(true);
+        getting_data.setVisible(true);
         
         new Thread(() ->{
             if(getRevenants()== null){
                 createRevenantsView();
-                tabela.setItems(getRevenants());
+                table.setItems(getRevenants());
                 setRevenantsTime();
                 unlockScreen();
                 resizeTable();
             }
             else {
-                tabela.setItems(getRevenants());
+                table.setItems(getRevenants());
                 unlockScreen();
                 resizeTable();
             }      
@@ -358,18 +358,18 @@ public class Controller implements Initializable {
     
     private void setMagicView(){
         tablesTypeTwo();
-        gettingData.setVisible(true);
+        getting_data.setVisible(true);
         
         new Thread(() ->{
             if(getMagic()== null){
                 createMagicView();
-                tabela.setItems(getMagic());
+                table.setItems(getMagic());
                 setMagicTime();
                 unlockScreen();
                 resizeTable();
             }
             else {
-                tabela.setItems(getMagic());
+                table.setItems(getMagic());
                 unlockScreen();
                 resizeTable();
             }      
@@ -378,18 +378,18 @@ public class Controller implements Initializable {
     
     private void setRangedView(){
         tablesTypeTwo();
-        gettingData.setVisible(true);
+        getting_data.setVisible(true);
         
         new Thread(() ->{
             if(getRanged() == null){
                 createRangedView();
-                tabela.setItems(getRanged());
+                table.setItems(getRanged());
                 setRangedTime();
                 unlockScreen();
                 resizeTable();
             }
             else {
-                tabela.setItems(getRanged());
+                table.setItems(getRanged());
                 unlockScreen();
                 resizeTable();
             }      
@@ -398,18 +398,18 @@ public class Controller implements Initializable {
     
     private void setRaids1View(){
         tablesTypeThree();
-        gettingData.setVisible(true);
+        getting_data.setVisible(true);
         
         new Thread(() ->{
             if(getRaids1()== null){
                 createRaids1View();
-                tabela.setItems(getRaids1());
+                table.setItems(getRaids1());
                 setRaids1Time();
                 unlockScreen();
                 resizeTable();
             }
             else {
-                tabela.setItems(getRaids1());
+                table.setItems(getRaids1());
                 unlockScreen();
                 resizeTable();
             }      
@@ -418,18 +418,18 @@ public class Controller implements Initializable {
     
     private void setRaids2View(){
         tablesTypeOne();
-        gettingData.setVisible(true);
+        getting_data.setVisible(true);
         
         new Thread(() ->{
             if(getRaids2()== null){
                 createRaids2View();
-                tabela.setItems(getRaids2());
+                table.setItems(getRaids2());
                 setRaids2Time();
                 unlockScreen();
                 resizeTable();
             }
             else {
-                tabela.setItems(getRaids2());
+                table.setItems(getRaids2());
                 unlockScreen();
                 resizeTable();
             }      
@@ -438,18 +438,18 @@ public class Controller implements Initializable {
     
     private void setMeleeView(){
         tablesTypeTwo();
-        gettingData.setVisible(true);
+        getting_data.setVisible(true);
         
         new Thread(() ->{
             if(getMelee()== null){
                 createMeleeView();
-                tabela.setItems(getMelee());
+                table.setItems(getMelee());
                 setMeleeTime();
                 unlockScreen();
                 resizeTable();
             }
             else {
-                tabela.setItems(getMelee());
+                table.setItems(getMelee());
                 unlockScreen();
                 resizeTable();
             }      
@@ -458,18 +458,18 @@ public class Controller implements Initializable {
     
     private void setFarmHerbsView(){
         tablesTypeTwo();
-        gettingData.setVisible(true);
+        getting_data.setVisible(true);
         
         new Thread(() ->{
             if(getFarmherbs()== null){
                 createFarmHerbsView();
-                tabela.setItems(getFarmherbs());
+                table.setItems(getFarmherbs());
                 setFarmingTime();
                 unlockScreen();
                 resizeTable();
             }
             else {
-                tabela.setItems(getFarmherbs());
+                table.setItems(getFarmherbs());
                 unlockScreen();
                 resizeTable();
             }      
@@ -478,18 +478,18 @@ public class Controller implements Initializable {
     
     private void setPotionView(){
         tablesTypeTwo();
-        gettingData.setVisible(true);
+        getting_data.setVisible(true);
         
         new Thread(() ->{
             if(getPotions()== null){
                 createPotionsView();
-                tabela.setItems(getPotions());
+                table.setItems(getPotions());
                 setPotionsTime();
                 unlockScreen();
                 resizeTable();
             }
             else {
-                tabela.setItems(getPotions());
+                table.setItems(getPotions());
                 unlockScreen();
                 resizeTable();
             }      
@@ -498,18 +498,18 @@ public class Controller implements Initializable {
  
     private void setZulrahView(){
         tablesTypeThree();
-        gettingData.setVisible(true);
+        getting_data.setVisible(true);
         
         new Thread(() ->{
             if(getZulrah() == null){
                 createZulrahView();
-                tabela.setItems(getZulrah());
+                table.setItems(getZulrah());
                 setZulrahTime();
                 unlockScreen();
                 resizeTable();
             }
             else {
-                tabela.setItems(getZulrah());
+                table.setItems(getZulrah());
                 unlockScreen();
                 resizeTable();
             }
@@ -518,127 +518,126 @@ public class Controller implements Initializable {
 
   
   
-
     private void refreshData(){
-        refreshingData.setVisible(true);
+        refreshing_data.setVisible(true);
         lockScreen();
         
-        if(revenantsBar.isSelected()){
+        if(revenants_bar.isSelected()){
             new Thread(() ->{
                 createRevenantsView();
-                tabela.setItems(getRevenants());
+                table.setItems(getRevenants());
                 setRevenantsTime();
                 unlockScreen();} ).start();
         }
-        if(zulrahBar.isSelected()){
+        if(zulrah_bar.isSelected()){
             new Thread(() ->{
                 createZulrahView();
-                tabela.setItems(getZulrah());
+                table.setItems(getZulrah());
                 setZulrahTime();
                 unlockScreen();} ).start();
         }
-        else if(potionsBar.isSelected()){
+        else if(potions_bar.isSelected()){
             new Thread(() ->{
                 createPotionsView();
-                tabela.setItems(getPotions());
+                table.setItems(getPotions());
                 setPotionsTime();
                 unlockScreen();} ).start();
         }
-        else if(farmingBar.isSelected()){
+        else if(farming_bar.isSelected()){
             new Thread(() ->{
                 createFarmHerbsView();
-                tabela.setItems(getFarmherbs());
+                table.setItems(getFarmherbs());
                 setFarmingTime();
                 unlockScreen();} ).start();
         }
-        else if(meleeBar.isSelected()){
+        else if(melee_bar.isSelected()){
             new Thread(() ->{
                 createMeleeView();
-                tabela.setItems(getMelee());
+                table.setItems(getMelee());
                 setMeleeTime();
                 unlockScreen();} ).start();
         }
-        else if(raids1Bar.isSelected()){
+        else if(raids1_bar.isSelected()){
             new Thread(() ->{
                 createRaids1View();
-                tabela.setItems(getRaids1());
+                table.setItems(getRaids1());
                 setRaids1Time();
                 unlockScreen();} ).start();
         }
-        else if(raids2Bar.isSelected()){
+        else if(raids2_bar.isSelected()){
             new Thread(() ->{
                 createRaids2View();
-                tabela.setItems(getRaids2());
+                table.setItems(getRaids2());
                 setRaids2Time();
                 unlockScreen();} ).start();
         }
-        else if(rangedBar.isSelected()){
+        else if(ranged_bar.isSelected()){
             new Thread(() ->{
                 createRangedView();
-                tabela.setItems(getRanged());
+                table.setItems(getRanged());
                 setRangedTime();
                 unlockScreen();} ).start();
         }
-        else if(magicBar.isSelected()){
+        else if(magic_bar.isSelected()){
             new Thread(() ->{
                 createMagicView();
-                tabela.setItems(getMagic());
+                table.setItems(getMagic());
                 setMagicTime();
                 unlockScreen();} ).start();
         }
-        else if(guthansBar.isSelected()){
+        else if(guthans_bar.isSelected()){
             new Thread(() ->{
                 createGuthansView();
-                tabela.setItems(getGuthans());
+                table.setItems(getGuthans());
                 setGuthansTime();
                 unlockScreen();} ).start();
         }
-        else if(dharokBar.isSelected()){
+        else if(dharok_bar.isSelected()){
             new Thread(() ->{
                 createDharokView();
-                tabela.setItems(getDharok());
+                table.setItems(getDharok());
                 setDharokTime();
                 unlockScreen();} ).start();
         }
-        else if(treasureBar.isSelected()){
+        else if(treasure_bar.isSelected()){
             new Thread(() ->{
                 createTreasuretrailsView();
-                tabela.setItems(getTreasuretrails());
+                table.setItems(getTreasuretrails());
                 setTreasureTime();
                 unlockScreen();} ).start();
         }
-        else if(foodBar.isSelected()){
+        else if(food_bar.isSelected()){
             new Thread(() ->{
                 createFoodView();
-                tabela.setItems(getFood());
+                table.setItems(getFood());
                 setFoodTime();
                 unlockScreen();} ).start();
         }
-        else if(resBar.isSelected()){
+        else if(res_bar.isSelected()){
             new Thread(() ->{
                 createResourcesView();
-                tabela.setItems(getResources());
+                table.setItems(getResources());
                 setResTime();
                 unlockScreen();} ).start();
         }
-        else if(ammoBar.isSelected()){
+        else if(ammo_bar.isSelected()){
             new Thread(() ->{
                 createAmmoView();
-                tabela.setItems(getAmmo());
+                table.setItems(getAmmo());
                 setAmmoTime();
                 unlockScreen();} ).start();
         }
-        else if(telrunsBar.isSelected()){
+        else if(telruns_bar.isSelected()){
             new Thread(() ->{
                 createTelruneView();
-                tabela.setItems(getTelrune());
+                table.setItems(getTelrune());
                 setTelrunsTime();
                 unlockScreen();} ).start();
         }
-        else if(otherBar.isSelected()){
+        else if(other_bar.isSelected()){
             new Thread(() ->{
                 createOtherView();
-                tabela.setItems(getOther());
+                table.setItems(getOther());
                 setOtherTime();
                 unlockScreen();} ).start();
         }
@@ -646,9 +645,9 @@ public class Controller implements Initializable {
     }
    
     private void unhide(ToggleButton... tgbutton){
-        ArrayList<ToggleButton> toggleBars = new ArrayList<>(Arrays.asList(revenantsBar, zulrahBar, farmingBar, potionsBar, 
-                     meleeBar, raids1Bar, raids2Bar, rangedBar, magicBar, foodBar, guthansBar, 
-                     dharokBar, treasureBar, resBar, ammoBar, telrunsBar, otherBar));
+        ArrayList<ToggleButton> toggleBars = new ArrayList<>(Arrays.asList(revenants_bar, zulrah_bar, farming_bar, potions_bar, 
+                     melee_bar, raids1_bar, raids2_bar, ranged_bar, magic_bar, food_bar, guthans_bar, 
+                     dharok_bar, treasure_bar, res_bar, ammo_bar, telruns_bar, other_bar));
               
         for(int j=0;j<tgbutton.length;j++){   
             for(int i=0; i<toggleBars.size(); i++) {
@@ -665,55 +664,55 @@ public class Controller implements Initializable {
     } 
 
     private void saveData(){
-        if(revenantsBar.isSelected()){
+        if(revenants_bar.isSelected()){
             new ExcelFile(getUnsortedRevenants(), "Revenants", getRevenantsTime());
         }
-        if(raids1Bar.isSelected()){
+        if(raids1_bar.isSelected()){
             new ExcelFile(getUnsortedRaids1(), "Raids1", getRaids1Time());
         }
-        if(raids2Bar.isSelected()){
+        if(raids2_bar.isSelected()){
             new ExcelFile(getUnsortedRaids2(), "Raids2", getRaids2Time());
         }
-        if(treasureBar.isSelected()){
+        if(treasure_bar.isSelected()){
             new ExcelFile(getUnsortedTreasuretrails(), "Treasure", getTreasureTime());
         }
-        if(zulrahBar.isSelected()){
+        if(zulrah_bar.isSelected()){
             new ExcelFile(getUnsortedZulrah(), "Zulrah", getZulrahTime());
         }
-        else if(potionsBar.isSelected()){
+        else if(potions_bar.isSelected()){
             new ExcelFile(getUnsortedPotions(), "Potions", getPotionsTime());
         }
-        else if(farmingBar.isSelected()){
+        else if(farming_bar.isSelected()){
             new ExcelFile(getUnsortedFarmherbs(), "FarmHerbs", getFarmingTime());
         }
-        else if(meleeBar.isSelected()){
+        else if(melee_bar.isSelected()){
             new ExcelFile(getUnsortedMelee(), "Melee", getMeleeTime());
         }
-        else if(rangedBar.isSelected()){
+        else if(ranged_bar.isSelected()){
             new ExcelFile(getUnsortedRanged(), "Ranged", getRangedTime());
         }
-        else if(magicBar.isSelected()){
+        else if(magic_bar.isSelected()){
            new ExcelFile(getUnsortedMagic(), "Magic", getMagicTime());
         }
-        else if(guthansBar.isSelected()){
+        else if(guthans_bar.isSelected()){
             new ExcelFile(getUnsortedGuthans(), "Guthans", getGuthansTime());
         }
-        else if(dharokBar.isSelected()){
+        else if(dharok_bar.isSelected()){
             new ExcelFile(getUnsortedDharok(), "Dharok", getDharokTime());
         }
-        else if(foodBar.isSelected()){
+        else if(food_bar.isSelected()){
             new ExcelFile(getUnsortedFood(), "Food", getFoodTime());
         }
-        else if(resBar.isSelected()){
+        else if(res_bar.isSelected()){
             new ExcelFile(getUnsortedResources(), "Resources", getResTime());
         }
-        else if(ammoBar.isSelected()){
+        else if(ammo_bar.isSelected()){
             new ExcelFile(getUnsortedAmmo(), "Ammo", getAmmoTime());
         }
-        else if(telrunsBar.isSelected()){
+        else if(telruns_bar.isSelected()){
             new ExcelFile(getUnsortedTelrune(), "TelRun", getTelrunsTime());
         }
-        else if(otherBar.isSelected()){
+        else if(other_bar.isSelected()){
             new ExcelFile(getUnsortedOther(), "Other", getOtherTime());
         } 
     }
@@ -721,67 +720,67 @@ public class Controller implements Initializable {
     
     @Override
      public void initialize(URL url, ResourceBundle rb) {      
-         //Linkovanje kolona sa propertijima
-        ikone.setCellValueFactory(new PropertyValueFactory("ikonice"));  
-        naziv.setCellValueFactory(new PropertyValueFactory("iconName"));
+         //Linking columns with properties
+        icons.setCellValueFactory(new PropertyValueFactory("icons"));  
+        name.setCellValueFactory(new PropertyValueFactory("iconName"));
         buy.setCellValueFactory(new PropertyValueFactory("buyingPrice"));
         sell.setCellValueFactory(new PropertyValueFactory("sellingPrice"));
         ge.setCellValueFactory(new PropertyValueFactory("gePrice"));
         margin.setCellValueFactory(new PropertyValueFactory("profitperone"));
-        itemtoscales.setCellValueFactory(new PropertyValueFactory("itemtoscales"));
-        itemtoitem.setCellValueFactory(new PropertyValueFactory("itemtoitem"));
-        beststrategy.setCellValueFactory(new PropertyValueFactory("beststrategy"));
+        item_to_scales.setCellValueFactory(new PropertyValueFactory("itemtoscales"));
+        item_to_item.setCellValueFactory(new PropertyValueFactory("itemtoitem"));
+        best_strategy.setCellValueFactory(new PropertyValueFactory("beststrategy"));
         pp1.setCellValueFactory(new PropertyValueFactory("profitperone"));
-        bestpp1.setCellValueFactory(new PropertyValueFactory("bestprofitperone"));
+        best_pp1.setCellValueFactory(new PropertyValueFactory("bestprofitperone"));
         limit.setCellValueFactory(new PropertyValueFactory("limit"));
         tp.setCellValueFactory(new PropertyValueFactory("totalprofit"));
-        besttp.setCellValueFactory(new PropertyValueFactory("besttotalprofit"));              
+        best_tp.setCellValueFactory(new PropertyValueFactory("besttotalprofit"));              
         roi.setCellValueFactory(new PropertyValueFactory("roi"));
-        bestroi.setCellValueFactory(new PropertyValueFactory("bestroi"));
+        best_roi.setCellValueFactory(new PropertyValueFactory("bestroi"));
         
-        //Formatiranje vrednosti iz tabele
+        //Formating values from tables
         buy.setCellFactory(new FormatFactory<>(new DecimalFormat("#,##0"), true));
         sell.setCellFactory(new FormatFactory<>(new DecimalFormat("#,##0"), true));
         ge.setCellFactory(new FormatFactory<>(new DecimalFormat("#,##0"), true));
         margin.setCellFactory(new FormatFactory<>(new DecimalFormat("#,##0"), false));
-        itemtoscales.setCellFactory(new FormatFactory<>(new DecimalFormat("#,##0"), false));
-        itemtoitem.setCellFactory(new FormatFactory<>(new DecimalFormat("#,##0"), false));
+        item_to_scales.setCellFactory(new FormatFactory<>(new DecimalFormat("#,##0"), false));
+        item_to_item.setCellFactory(new FormatFactory<>(new DecimalFormat("#,##0"), false));
         pp1.setCellFactory(new FormatFactory<>(new DecimalFormat("#,##0"), false));
-        bestpp1.setCellFactory(new FormatFactory<>(new DecimalFormat("#,##0"), false));
+        best_pp1.setCellFactory(new FormatFactory<>(new DecimalFormat("#,##0"), false));
         limit.setCellFactory(new FormatFactory<>(new DecimalFormat("#,##0"), false));
         tp.setCellFactory(new FormatFactory<>(new DecimalFormat("#,##0"), false));
-        besttp.setCellFactory(new FormatFactory<>(new DecimalFormat("#,##0"), false));
+        best_tp.setCellFactory(new FormatFactory<>(new DecimalFormat("#,##0"), false));
         roi.setCellFactory(new FormatFactory<>(new DecimalFormat("#.##%"), false));
-        bestroi.setCellFactory(new FormatFactory<>(new DecimalFormat("#.##%"), false));
+        best_roi.setCellFactory(new FormatFactory<>(new DecimalFormat("#.##%"), false));
         
         //Button action to unhide Toggle button(s)
-        revenants.setOnAction(e -> unhide(revenantsBar));
-        zulrah.setOnAction(e -> unhide(zulrahBar));
-        farmingHerbs.setOnAction(e -> unhide(farmingBar));       
-        potions.setOnAction(e -> unhide(potionsBar));       
-        attackStyles.setOnAction(e -> unhide(meleeBar, rangedBar, magicBar, raids1Bar, raids2Bar));
-        sets.setOnAction(e -> unhide(guthansBar, dharokBar));
-        treasureTrails.setOnAction(e -> unhide(treasureBar));
-        other.setOnAction(e -> unhide(otherBar, ammoBar, foodBar, resBar, telrunsBar));     
+        revenants.setOnAction(e -> unhide(revenants_bar));
+        zulrah.setOnAction(e -> unhide(zulrah_bar));
+        farming_herbs.setOnAction(e -> unhide(farming_bar));       
+        potions.setOnAction(e -> unhide(potions_bar));       
+        attack_styles.setOnAction(e -> unhide(melee_bar, ranged_bar, magic_bar, raids1_bar, raids2_bar));
+        sets.setOnAction(e -> unhide(guthans_bar, dharok_bar));
+        treasure_trails.setOnAction(e -> unhide(treasure_bar));
+        other.setOnAction(e -> unhide(other_bar, ammo_bar, food_bar, res_bar, telruns_bar));     
              
         //Toggle buttons getting data
-        revenantsBar.setOnAction(e -> setRevenantsView());
-        zulrahBar.setOnAction(e -> setZulrahView());
-        farmingBar.setOnAction(e -> setFarmHerbsView()); 
-        potionsBar.setOnAction(e -> setPotionView());
-        meleeBar.setOnAction(e -> setMeleeView());
-        raids1Bar.setOnAction(e -> setRaids1View());
-        raids2Bar.setOnAction(e -> setRaids2View());
-        rangedBar.setOnAction(e -> setRangedView());
-        magicBar.setOnAction(e -> setMagicView());               
-        guthansBar.setOnAction(e -> setGuthansView());
-        dharokBar.setOnAction(e -> setDharokView());
-        treasureBar.setOnAction(e -> setTreasuretrailsView());
-        foodBar.setOnAction(e -> setFoodView()); 
-        resBar.setOnAction(e -> setResourcesView());
-        ammoBar.setOnAction(e -> setAmmoView());
-        telrunsBar.setOnAction(e -> setTelRuneView());
-        otherBar.setOnAction(e -> setOtherView());
+        revenants_bar.setOnAction(e -> setRevenantsView());
+        zulrah_bar.setOnAction(e -> setZulrahView());
+        farming_bar.setOnAction(e -> setFarmHerbsView()); 
+        potions_bar.setOnAction(e -> setPotionView());
+        melee_bar.setOnAction(e -> setMeleeView());
+        raids1_bar.setOnAction(e -> setRaids1View());
+        raids2_bar.setOnAction(e -> setRaids2View());
+        ranged_bar.setOnAction(e -> setRangedView());
+        magic_bar.setOnAction(e -> setMagicView());               
+        guthans_bar.setOnAction(e -> setGuthansView());
+        dharok_bar.setOnAction(e -> setDharokView());
+        treasure_bar.setOnAction(e -> setTreasuretrailsView());
+        food_bar.setOnAction(e -> setFoodView()); 
+        res_bar.setOnAction(e -> setResourcesView());
+        ammo_bar.setOnAction(e -> setAmmoView());
+        telruns_bar.setOnAction(e -> setTelRuneView());
+        other_bar.setOnAction(e -> setOtherView());
 
         //Save button for saving data in excel format
         save.setOnAction(e -> saveData());

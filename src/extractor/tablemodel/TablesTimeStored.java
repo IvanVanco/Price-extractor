@@ -5,8 +5,8 @@ import java.util.Date;
 
 public class TablesTimeStored {
             
-    private static Date revenantsTime, zulrahTime, farmingTime, potionsTime, meleeTime, rangedTime, magicTime, raids1Time, raids2Time,
-            foodTime, guthansTime, dharokTime, resTime, ammoTime, telrunsTime, treasureTime, otherTime;
+    private static Date revenants_time, zulrah_time, farming_time, potions_time, melee_time, ranged_time, magic_time, raids1_time, raids2_time,
+            food_time, guthans_time, dharok_time, res_time, ammo_time, telruns_time, treasure_time, other_time;
 
     
 
@@ -16,139 +16,139 @@ public class TablesTimeStored {
     }
     
     public static Date getRevenantsTime() {
-        return revenantsTime;
+        return revenants_time;
     }
     
     public static void setRevenantsTime() {
-        revenantsTime = getCurrentTime();
+        revenants_time = getCurrentTime();
     }
     
     public static Date getZulrahTime() {
-        return zulrahTime;
+        return zulrah_time;
     }
 
     public static void setZulrahTime() {
-        zulrahTime = getCurrentTime();
+        zulrah_time = getCurrentTime();
     }
 
     public static Date getFarmingTime() {
-        return farmingTime;
+        return farming_time;
     }
 
     public static void setFarmingTime() {
-        farmingTime = getCurrentTime();
+        farming_time = getCurrentTime();
     }
 
     public static Date getPotionsTime() {
-        return potionsTime;
+        return potions_time;
     }
 
     public static void setPotionsTime() {
-        potionsTime = getCurrentTime();
+        potions_time = getCurrentTime();
     }
 
     public static Date getMeleeTime() {
-        return meleeTime;
+        return melee_time;
     }
 
     public static void setMeleeTime() {
-        meleeTime = getCurrentTime();
+        melee_time = getCurrentTime();
     }
 
     public static Date getRaids1Time() {
-        return raids1Time;
+        return raids1_time;
     }
     
     public static void setRaids1Time() {
-        raids1Time = getCurrentTime();
+        raids1_time = getCurrentTime();
     }
     
     public static Date getRaids2Time() {
-        return raids2Time;
+        return raids2_time;
     }
     
     public static void setRaids2Time() {
-        raids2Time = getCurrentTime();
+        raids2_time = getCurrentTime();
     }
     
     public static Date getRangedTime() {
-        return rangedTime;
+        return ranged_time;
     }
 
     public static void setRangedTime() {
-        rangedTime = getCurrentTime();
+        ranged_time = getCurrentTime();
     }
 
     public static Date getMagicTime() {
-        return magicTime;
+        return magic_time;
     }
 
     public static void setMagicTime() {
-        magicTime = getCurrentTime();
+        magic_time = getCurrentTime();
     }
 
     public static Date getFoodTime() {
-        return foodTime;
+        return food_time;
     }
 
     public static void setFoodTime() {
-        foodTime = getCurrentTime();
+        food_time = getCurrentTime();
     }
 
     public static Date getGuthansTime() {
-        return guthansTime;
+        return guthans_time;
     }
 
     public static void setGuthansTime() {
-        guthansTime = getCurrentTime();
+        guthans_time = getCurrentTime();
     }
 
     public static Date getDharokTime() {
-        return dharokTime;
+        return dharok_time;
     }
 
     public static void setDharokTime() {
-        dharokTime = getCurrentTime();
+        dharok_time = getCurrentTime();
     }
 
     public static Date getResTime() {
-        return resTime;
+        return res_time;
     }
 
     public static void setResTime() {
-        resTime = getCurrentTime();
+        res_time = getCurrentTime();
     }
 
     public static Date getAmmoTime() {
-        return ammoTime;
+        return ammo_time;
     }
 
     public static void setAmmoTime() {
-        ammoTime = getCurrentTime();
+        ammo_time = getCurrentTime();
     }
 
     public static Date getTelrunsTime() {
-        return telrunsTime;
+        return telruns_time;
     }
 
     public static void setTelrunsTime() {
-        telrunsTime = getCurrentTime();
+        telruns_time = getCurrentTime();
     }
     
     public static Date getTreasureTime() {
-        return treasureTime;
+        return treasure_time;
     }
     
     public static void setTreasureTime() {
-        treasureTime = getCurrentTime();
+        treasure_time = getCurrentTime();
     }
     
     public static Date getOtherTime() {
-        return otherTime;
+        return other_time;
     }
 
     public static void setOtherTime() {
-        otherTime = getCurrentTime();
+        other_time = getCurrentTime();
     }   
     
 }

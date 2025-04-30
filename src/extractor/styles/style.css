@@ -3,7 +3,7 @@
     -fx-alignment: CENTER;
 }
 
-#ikone, #naziv{
+icons, #name{
     -fx-alignment: CENTER_LEFT;
 }
 
@@ -60,12 +60,12 @@
     
 }
 
-#attackStyles,#sets,#other,#potions,#zulrah,#farmingHerbs,#revenants, #treasureTrails{
+#attack_styles,#sets,#other,#potions,#zulrah,#farming_herbs,#revenants, #treasure_trails{
     -fx-background-repeat: no-repeat;
     -fx-background-position: 5px 7px;
 }
 
-#attackStyles{
+#attack_styles{
     -fx-background-image: url("../slike/Buttons/Bosses.jpg");
     -fx-background-position: 0px 3px;
 } 
@@ -90,7 +90,7 @@
     -fx-background-position: 2px 7px; 
 }
 
-#treasureTrails{
+#treasure_trails{
     -fx-background-image: url("../slike/Buttons/Cluescroll.png"); 
     -fx-background-position: 2px 7px; 
 }
@@ -100,7 +100,7 @@
     -fx-background-position: 2px 7px; 
 }
 
-#farmingHerbs{
+#farming_herbs{
     -fx-background-image: url("../slike/Buttons/Farming.png");
     -fx-background-position: 2px 7px;
 }
@@ -113,60 +113,60 @@
     -fx-background-image: url("../slike/Buttons/Excel.png");
 }
 
-#revenantsBar{
+#revenants_bar{
     -fx-background-image: url("../slike/Toggle/Revenants.png");
     -fx-background-size: 36px;
 }
-#treasureBar{
+#treasure_bar{
     -fx-background-image: url("../slike/Toggle/Casket.png");
     -fx-background-size: 36px;
 }
-#zulrahBar{
+#zulrah_bar{
     -fx-background-image: url("../slike/Toggle/Zulrah_boss.png");
     -fx-background-size: 36px;
 }
-#farmingBar{
+#farming_bar{
     -fx-background-image: url("../slike/Toggle/Herblore.png");
 }
-#potionsBar{
+#potions_bar{
     -fx-background-image: url("../slike/Toggle/Potions.png");
 }
-#meleeBar{
+#melee_bar{
     -fx-background-image: url("../slike/Toggle/Melee.png");
 }
-#rangedBar{
+#ranged_bar{
     -fx-background-image: url("../slike/Toggle/Ranged.png");
     -fx-background-size: 25px;
 }
-#magicBar{
+#magic_bar{
     -fx-background-image: url("../slike/Toggle/Magic.png");
 }
-#raids1Bar{
+#raids1_bar{
     -fx-background-image: url("../slike/Toggle/Raids1.png");
 }
-#raids2Bar{
+#raids2_bar{
     -fx-background-image: url("../slike/Toggle/Raids2.png");
 }
-#guthansBar{
+#guthans_bar{
     -fx-background-image: url("../slike/Toggle/Guthan's_armour.png");
 }
-#dharokBar{
+#dharok_bar{
     -fx-background-image: url("../slike/Toggle/Dharok's_armour.png");
 }
-#foodBar{
+#food_bar{
     -fx-background-image: url("../slike/Toggle/Anchovy_pizza.png");
     -fx-background-size: 32px;
 }
-#resBar{
+#res_bar{
     -fx-background-image: url("../slike/Toggle/Axe_n_pickaxe.png");
 }
-#ammoBar{
+#ammo_bar{
     -fx-background-image: url("../slike/Toggle/Ammo.png");
 }
-#telrunsBar{
+#telruns_bar{
     -fx-background-image: url("../slike/Toggle/Teleport.png");
 }
-#otherBar{
+#other_bar{
     -fx-background-image: url("../slike/Toggle/Other.png");
     -fx-background-size: 32px;
 }

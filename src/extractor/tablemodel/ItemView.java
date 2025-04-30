@@ -295,12 +295,6 @@ public class ItemView {
         potions.add(new ItemIndicators(EnumData.Anti_venom4));
         potions.add(new ItemIndicators(EnumData.Anti_venom3));
         potions.add(new ItemIndicators(EnumData.Antidote4));
-
-                //Bastion_potion4(22461,2000, "Potions", "Bastion potion(4)"), //NOVO
-        //Bastion_potion3(22464,2000, "Potions", "Bastion potion(3)"),  //NOVO
-        //Battlemage_potion4(22449,2000, "Potions", "Battlemage potion(4)"), //NOVO
-        //Battlemage_potion3(22452,2000, "Potions", "Battlemage potion(3)"),  //NOVO
-        //Vial_of_blood(22446,13000, "Potions", "Vial of blood"),  //NOVO  
         
         ItemView.unpotions = FXCollections.observableArrayList(potions);
         ItemView.potions = potions;

@@ -9,50 +9,50 @@ import javafx.scene.image.ImageView;
 
 public class ItemIndicators implements Indicators {
                
-    private JsonPrices osb = new JsonPrices();    
+    private JsonPrices rnl = new JsonPrices();    
     private String name;
     private int id;
     private int limit;
-    private String iconName;
-    private ImageView ikonice;
+    private String icon_name;
+    private ImageView icons;
     
-    private int[] cene;
-    private int buyingPrice;
-    private int sellingPrice;
-    private int gePrice;
+    private int[] prices;
+    private int buying;
+    private int selling;
+    private int ge;
 
 
    public ItemIndicators(EnumData item){
        name = item.toString();
        id = item.getId();
        limit = item.getLimit();
-       iconName = item.getIconname();
-       ikonice = item.getIkonica();
+       icon_name = item.getIconname();
+       icons = item.getIkonica();
 
-       cene = osb.JsonOSBuddy(getID());
-       buyingPrice = cene[0];       
-       sellingPrice = cene[1];
-       gePrice = osb.JsonGE(getID());
+       prices = rnl.JsonRuneLite(getID());
+       buying = prices[0];       
+       selling = prices[1];
+       ge = rnl.JsonGE(getID());
    }
    
    //Konstruktor za Guthans i Dharok poslednja dva reda
-   public ItemIndicators(ObservableList<ItemIndicators> lista, String name){
+   public ItemIndicators(ObservableList<ItemIndicators> list, String name){
        limit = 10;
-       iconName = name;
+       icon_name = name;
        this.name = name;
        
        if(name.equals("TOTAL")){
             for(int i=0; i < 4; i++){
-                 buyingPrice += lista.get(i).checkBuyPrice();       
-                 sellingPrice += lista.get(i).checkSellPrice(); 
-                 gePrice += lista.get(i).checkGePrice();        
+                 buying += list.get(i).checkBuyPrice();       
+                 selling += list.get(i).checkSellPrice(); 
+                 ge += list.get(i).checkGePrice();        
             }
        }
        
        else if(name.equals("TOTAL TO SET")){
-            buyingPrice = lista.get(4).checkBuyPrice();       
-            sellingPrice = lista.get(5).checkSellPrice(); 
-            gePrice = 0;        
+            buying = list.get(4).checkBuyPrice();       
+            selling = list.get(5).checkSellPrice(); 
+            ge = 0;        
        }     
    }
 
@@ -70,23 +70,23 @@ public class ItemIndicators implements Indicators {
    }
 
    public String getIconName() {
-        return iconName;
+        return icon_name;
     }
 
-   public ImageView getIkonice() {
-        return ikonice;
+   public ImageView getIcons() {
+        return icons;
     }
 
     public int getBuyingPrice() {
-        return buyingPrice;
+        return buying;
     }
 
     public int getSellingPrice() {
-        return sellingPrice;
+        return selling;
     }
 
     public int getGePrice() {
-        return gePrice;
+        return ge;
     }
 
   
